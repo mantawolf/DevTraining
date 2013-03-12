@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+	<title>Note to Self</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link rel="stylesheet" href="noteToSelf.css">
+	<script>
+		window.addEventListener("storage", function(e){
+			var key = e.key; 
+			var newValue = e.newValue; 
+			var oldValue = e.oldValue; 
+			var url = e.url; 
+			var storageArea = e.storageArea; 
+
+			if(key != "stickiesArray"){
+				var p = document.getElementById("storageItems");
+				var l = document.createElement("li");
+
+				l.setAttribute("id","key");
+				l.innerHTML = "newValue: " + newValue + "<br />";
+				l.innerHTML += "oldValue: " + oldValue + "<br />";
+				l.innerHTML += "key: " + key + "<br />";
+				l.innerHTML += "url: " + url + "<br />";
+				l.innerHTML += "storageArea: " + storageArea + "<br />";
+
+				p.appendChild(l);
+			}
+		});
+	</script>
+</head>
+<body>
+		<ul id="storageItems">
+		</ul>
+</body>
+</html>
