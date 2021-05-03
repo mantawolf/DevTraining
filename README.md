@@ -1,4 +1,4 @@
-HTML5-Series-Presentations
+DevTraining Presentations
 ==========================
 
-Slides and sample code for HTML5 topics
+Slides and sample code for HTML5 topics, networking, and various other software engineering topics.
